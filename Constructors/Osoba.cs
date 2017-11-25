@@ -25,29 +25,33 @@ namespace Constructors
             //dla wartości logicznych będzie to bool, dla string też null
             id = 1;
             firstname = "Armin";
-            lastname = "Derencz";
+            lastname = "D.";
             age = 14;
         }
-        public Osoba(int id, string firstname, string lastname, string adress, int age, string gender) 
+
+
+        public Osoba(int id, string firstname, string lastname, string adress, int age, string gender)
         // konstruktor, który wywoływany jest z parametrami
         // konstruktor w którym będziemy tworzyć obiekt i przekazywać do niego parametry, 
-       //inicjujemy takimi wartościami jakie zostały wprowadzone w parametrze
+        //inicjujemy takimi wartościami jakie zostały wprowadzone w parametrze
         {
-            this.id = id; // this informuje, że te id tyczy się naszej klasy naszego obiektu ??
+            this.id = id; // this informuje, że te id dotyczy naszej klasy naszego obiektu ??
             this.firstname = firstname;
             this.lastname = lastname;
             this.adress = adress;
             this.age = age;
             this.gender = gender;
         }
+
         public Osoba(int id, string firstname, string lastname)
         {
             this.id = id; // this informuje, że te id tyczy się naszej klasy naszego obiektu ??
             this.firstname = firstname;
             this.lastname = lastname;
-            adress = "Olsztyn";
+            adress = "Olsztyn"; //osoby zawsze będą z Olsztyna
             age = 18;
         }
+
         public Osoba(int id, string firstname)
         {
             this.id = id; // this informuje, że te id tyczy się naszej klasy naszego obiektu ??
