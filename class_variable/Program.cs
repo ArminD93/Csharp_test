@@ -19,15 +19,17 @@ namespace class_variable
 
 
             Diary diary2 = new Diary(); // do zmiennej przypisujemy nowy obiekt
-                                 // zmienna wskazuje na nowy obiekt
+                                        // zmienna wskazuje na nowy obiekt
             diary2.AddRating(3);
 
             Diary diary3 = diary;
-            diary3.AddRating(6);
+            diary3.AddRating(5);
 
             int liczba = 4; //zmienna typu prostego, nie przechowuje wskaźnika do obiektu
                             //przechowuje wartość, a zmienna referencyjna - typu klasy
                             //przechowuje wskaźnik do obiektu
+
+          
         }
     }
 }
