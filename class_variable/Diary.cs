@@ -25,40 +25,24 @@ namespace class_variable
         {
             ratings.Add(rating);//dodaje ocene do dziennika
         }
+        
 
-        /// <summary>
-        /// Obliczanie średniej
-        /// </summary>
-        /// <returns></returns>
-        public float CalculateAverage()//metoda wylicza średnią, zwraca tylko średnią
+        internal DiaryStatistics ComputeStatistis()
         {
-            float sum = 0, avg = 0;//zmienna pomocnicza, w której przechowujemy sume i avg
+            DiaryStatistics stats = new DiaryStatistics();
+
+            float sum = 0f;//zmienna pomocnicza, w której przechowujemy sume 
 
             foreach (var rating in ratings)
             {
                 sum = sum + rating;
             }
-            avg = sum / ratings.Count();//wykorzystujac count na kolekcji elementów, to count da ilosc elementów w kolekcji
+            stats.AverageGrade = sum / ratings.Count();//wykorzystujac count na kolekcji elementów, to count da ilosc elementów w kolekcji
+            stats.MaxGrade = ratings.Max();         
+            stats.MinGrade = ratings.Min();
 
-            return avg;
+            return stats; //chcemy by zwracała obiekt DiaryStatistics
         }
 
-        /// <summary>
-        /// Pobiera najwyższą ocenę.
-        /// </summary>
-        /// <returns></returns>
-        public float giveMaxRating() //metoda pobiera maksymalną ocene - zwraca typ float
-        {
-            return ratings.Max();//metoda zwraca maksymalny element na liście
-        }
-
-        /// <summary>
-        ///  Pobiera najniższą ocenę.
-        /// </summary>
-        /// <returns></returns>
-        public float GiveMinRating()
-        {
-            return ratings.Min();
-        }
     }
 }
